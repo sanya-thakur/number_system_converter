@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number System Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="badge">COA MICRO PROJECT</div>
+
+            <h1>Number System Converter</h1>
+
+            <p>
+                Convert between Binary, Octal, Decimal and Hexadecimal
+                with step-by-step explanations.
+            </p>
+        </header>
+
+
+        <!-- INPUT SECTION -->
+
+        <section class="card">
+
+            <h2>Enter Number</h2>
+
+            <label for="numberInput">
+                Number
+            </label>
+
+            <input
+                type="text"
+                id="numberInput"
+                placeholder="Example: 45, 101101, 2D..."
+            >
+
+            <div class="select-row">
+
+                <div>
+                    <label for="fromBase">
+                        From
+                    </label>
+
+                    <select id="fromBase">
+                        <option value="2">Binary (Base 2)</option>
+                        <option value="8">Octal (Base 8)</option>
+                        <option value="10" selected>
+                            Decimal (Base 10)
+                        </option>
+                        <option value="16">
+                            Hexadecimal (Base 16)
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div>
+                    <label for="toBase">
+                        To
+                    </label>
+
+                    <select id="toBase">
+                        <option value="2" selected>
+                            Binary (Base 2)
+                        </option>
+
+                        <option value="8">
+                            Octal (Base 8)
+                        </option>
+
+                        <option value="10">
+                            Decimal (Base 10)
+                        </option>
+
+                        <option value="16">
+                            Hexadecimal (Base 16)
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <button id="convertBtn">
+                Convert Number
+            </button>
+
+            <p id="error" class="error"></p>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section
+            class="result-card"
+            id="resultCard"
+            style="display: none;"
+        >
+
+            <p class="result-label">
+                Conversion Result
+            </p>
+
+            <button
+                class="result-number"
+                id="resultNumber"
+                type="button"
+            >
+                101101₂
+            </button>
+
+            <p class="click-hint">
+                Click the result to view conversion steps
+            </p>
+
+
+            <!-- STEPS -->
+
+            <div
+                class="steps"
+                id="steps"
+            >
+
+                <div class="steps-header">
+                    Step-by-Step Explanation
+                </div>
+
+                <div id="stepsContent"></div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
